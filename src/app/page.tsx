@@ -7,7 +7,7 @@ export default async function Home() {
     const session = await getServerSession(authOptions)
     const caller = await createTRPCCaller(session)
     const hello = await caller.example.hello({
-        text: "Trpc from server component",
+        text: "Trpc test measurecare",
     })
     const secretMessage = session
         ? await caller.example.getSecretMessage()
